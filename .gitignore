@@ -1,0 +1,20 @@
+# Maven
+**/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+nbproject/private/
+nbbuild/
+dist/
+
+# Spring Boot - configuracion local
+**/application.properties
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos generados
+**/HELP.md
