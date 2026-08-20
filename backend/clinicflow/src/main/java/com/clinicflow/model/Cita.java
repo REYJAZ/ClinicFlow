@@ -7,7 +7,10 @@ import jakarta.persistence.GenerationType;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Table;
 @Entity
+@Table(name = "Cita")
 public class Cita {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +21,11 @@ public class Cita {
  private String estado;
  
  @ManyToOne
+ @JoinColumn(name = "idPaciente")
  private Paciente paciente;
+ 
  @ManyToOne
+ @JoinColumn(name = "idMedico")
  private Medico medico;
 
     public Cita() {}
